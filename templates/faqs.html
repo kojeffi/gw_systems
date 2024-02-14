@@ -1,29 +1,7 @@
-<!DOCTYPE html>
+{% extends 'master.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>GW Systems</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %} }" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-    <!-- Masthead-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+{% block content %}
+    <br><br><br><br>
       <style>
           @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
@@ -94,90 +72,9 @@
 }
 
       </style>
-</head>
-<body class="bg-light" id="page-top">
-<style>
-        .custom-background {
-            /* Define base color */
-            --base-color: #5f6afc;
-
-            /* Define gradient colors */
-            background-color: var(--base-color);
-            background-image: linear-gradient(to bottom, var(--base-color) 0%, #99aaff 100%);
-        }
-
-        /* Add more gradient colors as needed */
-
-        /* Example hover effect */
-        .custom-background:hover {
-            filter: brightness(110%);
-        }
-    </style>
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-background" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand text-white fst-italic" href="#page-top"><i><b>GW SYSTEMS</b></i>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars ms-1"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{% url 'home-url' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'home-url' %}">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'services-url' %}">Services</a></li>
-                  <style>
-        .nav-item {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .nav-item:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #ddd;
-        }
-    </style>
-              <ul class="navbar-nav ml-auto">
-    <li class="nav-item dropdown"> <!-- Add the "dropdown" class here -->
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Technical <!-- Change the text to "Technical" -->
-        </a>
-        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown"> <!-- Use "dropdown-menu" for the dropdown content -->
-            <a class="dropdown-item" href="{% url 'portfolio-url' %}">Portfolio</a> <!-- Example dropdown item -->
-            <a class="dropdown-item" href="{% url 'faqs-url' %}">Faqs</a> <!-- Example dropdown item with a link -->
-           <a class="dropdown-item" href="{% url 'techstack-url' %}">Technical Stack</a>  <!-- Example dropdown item -->
-           <a class="dropdown-item" href="{% url 'testimonials-url' %}">Client Testimonials</a>
-            <a class="dropdown-item" href="{% url 'partner-url' %}">Partnerships and Certifications</a>
-        </div>
-    </li>
-</ul>
- <li class="nav-item"><a class="nav-link" href="{% url 'blog-url' %}">Blog/Insights</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'contact-url' %}">Contact</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 <br><br><br>
     <div class="wrapper">
-      <h1 class="h4" style="color: #1b18e0">Frequently Asked Questions</h1>
+      <h1 class="h5">Frequently Asked Questions</h1>
 
       <div class="faq">
         <button class="accordion">
@@ -202,23 +99,8 @@
           </p>
         </div>
       </div>
+     <br><br><br><br>
       </div>
-<footer class="footer py-4 custom-background"  >
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-start text-white">Copyright &copy; GW Services 2023</div>
-            <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a class="link-dark text-decoration-none me-3 text-white" href="#">Privacy Policy</a>
-                <a class="link-dark text-decoration-none text-white" href="#">Terms of Use</a>
-            </div>
-        </div>
-    </div>
-</footer>
 
     <script>
       var acc = document.getElementsByClassName("accordion");
@@ -239,5 +121,4 @@
         });
       }
     </script>
-  </body>
-</html>
+{% endblock %}
